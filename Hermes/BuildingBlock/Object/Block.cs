@@ -59,9 +59,9 @@ namespace Hermes.BuildingBlock.Object
 
             if (hasher == null) return 0;
             hasher.AppendData(MerkleHash);
-            hasher.AppendData(PreviousBlockHash);
-            hasher.AppendData(BitConverter.GetBytes((byte)Version));
-            if (GenesisBlock != null) hasher.AppendData((Block)GenesisBlock);
+            hasher.AppendData(previousBlockHash);
+            hasher.AppendData(BitConverter.GetBytes((byte)version));
+            if (genesisBlock != null) hasher.AppendData((Block)genesisBlock);
 
             return BitConverter.ToInt32(hasher.GetCurrentHash());
         }

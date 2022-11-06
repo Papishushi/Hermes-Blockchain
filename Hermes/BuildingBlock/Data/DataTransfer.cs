@@ -4,12 +4,15 @@ using System.Text;
 
 namespace Hermes.BuildingBlock.Data
 {
-    public struct DataTransfer
+    public struct DataTransfer : ITransfer
     {
+        public byte[] SenderDirection { get => senderDirection; }
         [MarshalAs(UnmanagedType.LPArray, SizeConst = 16)]
         private readonly byte[] senderDirection;
+        public byte[] ReceiverDirection { get => receiverDirection; }
         [MarshalAs(UnmanagedType.LPArray, SizeConst = 16)]
         private readonly byte[] receiverDirection;
+        public byte[] Content { get => content; }
         [MarshalAs(UnmanagedType.LPArray)]
         private readonly byte[] content;
         private readonly byte[] hash;

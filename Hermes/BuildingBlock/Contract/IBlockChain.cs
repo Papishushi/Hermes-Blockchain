@@ -1,13 +1,14 @@
 ﻿
 using Hermes.BuildingBlock.Enum;
 using Hermes.Client.Contract;
+using System.Collections;
 
 namespace Hermes.BuildingBlock.Contract
 {
     public interface IBlockChain
     {
-        Dictionary<string, IBlock> Blocks { get; }
-        Dictionary<string, INode> Nodes { get; }
+        Hashtable Blocks { get; }
+        Hashtable Nodes { get; }
         BlockChainVersion Version { get; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Merkle.Data
 {
-    public struct MerkleTree<T> where T : struct
+    public struct MerkleTree<T>
     {
         private readonly byte[] result;
         public readonly IReadOnlyList<IEnumerable<MerkleNode<T>>> Children;

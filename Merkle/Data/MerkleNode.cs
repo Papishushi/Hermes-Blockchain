@@ -2,7 +2,7 @@
 
 namespace Merkle.Data
 {
-    public struct MerkleNode<T> where T : struct
+    public struct MerkleNode<T>
     {
         private readonly byte[] result;
 
